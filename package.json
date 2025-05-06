@@ -12,6 +12,7 @@
   "author": "Brodie",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^22.15.13",
     "nodemon": "^3.0.0"
   },
   "dependencies": {
