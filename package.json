@@ -1,0 +1,20 @@
+{
+  "name": "9014-final",
+  "version": "1.0.0",
+  "description": "A project by Brodie using cache, history api, fetch, dom.",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "build": "next build",
+    "dev": "nodemon server.js"
+  },
+  "author": "Brodie",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
