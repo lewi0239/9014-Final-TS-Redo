@@ -11,12 +11,12 @@ export async function getImages(searchTerm: string): Promise<void> {
   )}&image_type=${imageType}`;
   try {
     const response = await fetch(url);
-    const text = await response.text();
+    const data = await response.json();
     if (!response) {
       throw new Error(`API request: ${response}`);
     }
 
-    console.log(text);
+    console.log(data);
   } catch (err) {
     if (err) {
       console.error(err);

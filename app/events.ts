@@ -6,7 +6,6 @@ function setupEventListeners() {
     e.preventDefault();
     const searchTerm = input?.value.trim();
     if (searchTerm) getImages(searchTerm);
-    console.log(searchTerm);
   });
 }
 
