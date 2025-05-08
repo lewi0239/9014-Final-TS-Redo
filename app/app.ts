@@ -11,12 +11,14 @@ function init() {
 async function getCardImages(searchTerm: string): Promise<void> {
   const images: ImageData[] = await getImages(searchTerm);
   const body = document.querySelector("body");
-  const container = document.createElement("div");
+  const container = document.querySelector("#gallery");
+
+  if (!container) return;
+
+  container.textContent = "";
 
   images.forEach((imgData) => {
     const cards = card(imgData);
     container.appendChild(cards);
   });
-
-  body?.append(container);
 }
