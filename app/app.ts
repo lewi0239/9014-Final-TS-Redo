@@ -1,12 +1,11 @@
-import { setupEventListeners } from "./events";
-import { card } from "./widgets/card";
-import { getImages } from "./imageFetch";
-import { ImageData } from "./types/types";
+import { setupEventListeners } from "./events.ts";
+import { card } from "./widgets/card.ts";
+import { getImages } from "./imageFetch.ts";
+import type { ImageData } from "./types/types.ts";
 
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  console.log("app is running..");
   setupEventListeners(getCardImages);
 }
 async function getCardImages(searchTerm: string): Promise<void> {
@@ -14,7 +13,7 @@ async function getCardImages(searchTerm: string): Promise<void> {
   const body = document.querySelector("body");
   const container = document.createElement("div");
 
-  images.ForEach((imgData) => {
+  images.forEach((imgData) => {
     const cards = card(imgData);
     container.appendChild(cards);
   });

@@ -1,6 +1,6 @@
 export interface ImageData {
-  largeImageUrl: string;
-  userImageUrl: string;
+  largeImageURL: string;
+  userImageURL: string;
   user: string;
   tags: string;
 }

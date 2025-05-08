@@ -1,4 +1,4 @@
-import { ImageData } from "../types/types.ts";
+import type { ImageData } from "../types/types.ts";
 
 export function card(data: ImageData): HTMLElement {
   //These are the nodes I will use for each image fetched from the api
@@ -7,10 +7,10 @@ export function card(data: ImageData): HTMLElement {
   const ul = document.createElement("ul");
 
   const img = document.createElement("img");
-  img.src = data.largeImageUrl;
+  img.src = data.largeImageURL;
 
   const userImage = document.createElement("img");
-  userImage.src = data.userImageUrl;
+  userImage.src = data.userImageURL;
 
   const userName = document.createElement("p");
   userName.textContent = data.user;
