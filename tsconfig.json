@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "target": "esnext",
     "module": "esnext",
+    "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "moduleResolution": "nodenext",
-    "types": ["node"]
+    "types": ["vite/client"]
   },
-  "include": ["app/**/*.ts"],
+  "include": ["vite-env.d.ts", "app/**/*.ts"],
   "exclude": ["node_modules"]
 }
